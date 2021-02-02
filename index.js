@@ -6,12 +6,6 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
   res.sendFile('index.html', {root: __dirname + '/public/'});
 });
-app.get('/401', (req, res) => {
-  res.sendFile('401.html', {root: __dirname + '/public/'});
-});
-app.get('/404', (req, res) => {
-  res.sendFile('404.html', {root: __dirname + '/public/'});
-});
 app.get('/contact', (req, res) => {
   res.sendFile('contact.html', {root: __dirname + '/public/'});
 });
@@ -20,6 +14,20 @@ app.get('/team', (req, res) => {
 });
 app.get('/waiting-list', (req, res) => {
   res.sendFile('waiting-list.html', {root: __dirname + '/public/'});
+});
+app.get('/401', (req, res) => {
+  res.sendFile('401.html', {root: __dirname + '/public/'});
+});
+app.get('/404', (req, res) => {
+  res.sendFile('404.html', {root: __dirname + '/public/'});
+});
+
+app.use(function (req, res, next) {
+  res.status(401).sendFile('401.html', {root: __dirname + '/public/'})
+});
+
+app.use(function (req, res, next) {
+  res.status(404).sendFile('404.html', {root: __dirname + '/public/'})
 });
 
 app.listen(process.env.PORT || 5000)
