@@ -60,10 +60,6 @@ app.post('/contact', (req, res) => {
 });
 
 app.use(function (req, res, next) {
-  res.status(401).sendFile('401.html', {root: __dirname + '/public/'})
-});
-
-app.use(function (req, res, next) {
   res.status(404).sendFile('404.html', {root: __dirname + '/public/'})
 });
 
