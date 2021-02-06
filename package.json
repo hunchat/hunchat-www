@@ -1,10 +1,18 @@
 {
   "name": "hunchat-www",
-  "version": "1.0.0",
+  "version": "0.1.0",
+  "private": true,
   "description": "Hunchat website code",
+  "homepage": "https://github.com/hunchat/hunchat-www#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunchat/hunchat-www.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hunchat/hunchat-www/issues"
+  },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
   "keywords": [
@@ -14,7 +22,6 @@
     "JavaScript"
   ],
   "author": "Ernesto González",
-  "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.838.0",
     "body-parser": "^1.19.0",
