@@ -31,6 +31,9 @@ app.get('/team', (req, res) => {
 app.get('/waiting-list', (req, res) => {
   res.sendFile('waiting-list.html', {root: __dirname + '/public/'});
 });
+app.get('/terms', (req, res) => {
+  res.sendFile('terms.html', {root: __dirname + '/public/'});
+});
 app.get('/401', (req, res) => {
   res.sendFile('401.html', {root: __dirname + '/public/'});
 });
